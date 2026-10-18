@@ -1,0 +1,23 @@
+{
+  "name": "qq-whale-bot",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "深小鲸 QQ 机器人：文字 + 语音 + 记忆 + 定时主动发言",
+  "main": "src/onebot-adapter.js",
+  "scripts": {
+    "chat": "node src/cli.js",
+    "demo": "node src/cli.js --script examples/group-demo.txt --fast",
+    "start": "node src/onebot-adapter.js",
+    "check": "node src/selfcheck.mjs",
+    "voice": "node src/say.mjs --open",
+    "emoji": "node src/import-emoji.mjs",
+    "test": "node test/memory-scheduler-test.mjs && node test/affection-test.mjs && node test/onebot-offline-test.mjs && node test/private-offline-test.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "msedge-tts": "^2.1.0"
+  }
+}
